@@ -1,5 +1,5 @@
 /* Minimal service worker: caches only the app shell (logo, icons, this page) — never any company data. */
-var CACHE = 'arcon-hub-shell-v2';
+var CACHE = 'arcon-hub-shell-v3';
 var SHELL = ['./', 'index.html', 'config.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', function (e) { e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(SHELL); })); self.skipWaiting(); });
 self.addEventListener('activate', function (e) {
